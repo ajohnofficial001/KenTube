@@ -17,7 +17,7 @@ const VideoDetail = () => {
       setVideoDetail(data.items[0])
     );
 
-    fetchFromAPI(`videos?part=snippet&relatedToVideoId=${id}`).then((data) =>
+    fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}`).then((data) =>
       setVideos(data.items)
     );
   }, [id]);
@@ -30,7 +30,7 @@ const VideoDetail = () => {
   } = videoDetail;
 
   return (
-    <Box minHeight="95vh">
+    <Box minHeight="95vh" style={{ marginTop: "3rem" }}>
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>

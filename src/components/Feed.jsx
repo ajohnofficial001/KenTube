@@ -5,7 +5,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 import {} from "@mui/icons-material";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [videos, setVideos] = useState(null);
   useEffect(() => {
     setVideos(null);
@@ -33,14 +33,17 @@ const Feed = () => {
         <Typography
           className="copyright"
           variant="body2"
-          sx={{ mt: 1.5, color: "#ffffff" }}
+          sx={{ mt: 1.5, color: "gray", fontFamily: "Roboto, Inter" }}
         >
           {" "}
           Copyright 2022 @johncankode
         </Typography>
       </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box
+        p={2}
+        sx={{ overflowY: "auto", height: "90vh", flex: 2, marginTop: "6.5rem" }}
+      >
         <Typography
           variant="h4"
           fontWeight="bold"

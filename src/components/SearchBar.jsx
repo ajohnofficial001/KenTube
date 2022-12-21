@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Paper, IconButton } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
 const SearchBar = () => {
+  const inputRef = useRef();
   const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const navigate = useNavigate();
 
@@ -32,6 +37,7 @@ const SearchBar = () => {
       <input
         className="search-bar"
         placeholder="Search..."
+        ref={inputRef}
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

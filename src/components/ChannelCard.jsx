@@ -49,8 +49,8 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
           {channelDetail?.statistics?.subscriberCount && (
             <Typography>
               {parseInt(
-                channelDetail?.statistics.subscriberCount.toLocalString("en-US")
-              )}{" "}
+                channelDetail?.statistics?.subscriberCount
+              ).toLocaleString("en-US")}{" "}
               Subscribers
             </Typography>
           )}

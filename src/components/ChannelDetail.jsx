@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 
-import { Videos, ChannelCard } from "./";
+import { Videos, ChannelCard, Loader } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const ChannelDetail = () => {
@@ -12,12 +12,14 @@ const ChannelDetail = () => {
 
   useEffect(() => {
     const fetchResults = async () => {
-      const data = await fetchFromAPI(`channels?part=snippet&id=${id}`);
+      const data = await fetchFromAPI(
+        `channels?part=snippet,statistics&id=${id}`
+      );
 
       setChannelDetail(data?.items[0]);
 
       const videosData = await fetchFromAPI(
-        `search?channelId=${id}&part=snippet%20&order=date`
+        `search?channelId=${id}&part=snippet&order=date`
       );
 
       setVideos(videosData?.items);
@@ -26,6 +28,7 @@ const ChannelDetail = () => {
     fetchResults();
   }, [id]);
 
+  if (!videos?.length) return <Loader />;
   return (
     <Box minHeight="95vh">
       <Box>
