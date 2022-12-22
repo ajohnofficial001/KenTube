@@ -1,5 +1,5 @@
-import { Link, useParams } from "react-router-dom";
-import { Typography, Card, CardContent, CardMedia, Stack } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Typography, Card, CardContent, CardMedia } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import {
   demoThumbnailUrl,
@@ -8,9 +8,6 @@ import {
   demoChannelUrl,
   demoChannelTitle,
 } from "../utils/constant";
-import { useEffect, useState } from "react";
-import { fetchFromAPI } from "../utils/fetchFromAPI";
-import Loader from "./Loader";
 
 const VideoCard = ({
   video: {

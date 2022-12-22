@@ -30,7 +30,7 @@ const ChannelDetail = () => {
 
   if (!videos?.length) return <Loader />;
   return (
-    <Box minHeight="95vh">
+    <Box minHeight="95vh" style={{ marginTop: "6.5rem" }}>
       <Box>
         <div style={{ background: "1e31e3", zIndex: 10, height: "300px" }}>
           <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
