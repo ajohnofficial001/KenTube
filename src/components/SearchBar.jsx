@@ -33,6 +33,7 @@ const SearchBar = () => {
         boxShadow: "none",
         mr: { sm: 5 },
       }}
+      style={{ width: { sm: "2rem !important" } }}
     >
       <input
         className="search-bar"

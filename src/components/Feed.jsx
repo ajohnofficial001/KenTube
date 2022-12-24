@@ -42,7 +42,7 @@ const Feed = () => {
 
       <Box
         p={2}
-        sx={{ overflowY: "auto", height: "90vh", flex: 2, marginTop: "6.5rem" }}
+        sx={{ overflowY: "auto", height: "90vh", flex: 2, marginTop: "5rem" }}
       >
         <Typography
           variant="h4"

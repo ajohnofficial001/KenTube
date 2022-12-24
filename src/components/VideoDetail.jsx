@@ -39,7 +39,7 @@ const VideoDetail = () => {
   } = videoDetail;
 
   return (
-    <Box minHeight="95vh" style={{ marginTop: "6.5rem" }}>
+    <Box minHeight="95vh" style={{ marginTop: "4.6rem" }}>
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
           <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>

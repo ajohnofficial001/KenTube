@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-import { logo } from "../utils/constant.js";
+import KenTube, { logo } from "../utils/constant.js";
 import SearchBar from "./SearchBar.jsx";
 
 const Navbar = () => (
@@ -21,15 +21,7 @@ const Navbar = () => (
   >
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="logo" height={45} />
-      <h1
-        style={{
-          alignItems: "start",
-          color: "#fff",
-          fontFamily: "Roboto, Arial",
-        }}
-      >
-        KenTube
-      </h1>
+      <KenTube />
     </Link>
     <SearchBar />
   </Stack>

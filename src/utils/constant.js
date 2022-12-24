@@ -12,6 +12,30 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
+import { useTheme, useMediaQuery, Typography } from "@mui/material";
+
+export default function KenTube() {
+  const theme = useTheme();
+  const showText = useMediaQuery(theme.breakpoints.up("sm"));
+
+  return (
+    <>
+      {showText && (
+        <Typography
+          variant="h4"
+          style={{
+            alignItems: "start",
+            color: "#fff",
+            fontFamily: "Roboto, Arial",
+          }}
+        >
+          KenTube
+        </Typography>
+      )}
+    </>
+  );
+}
+
 export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
