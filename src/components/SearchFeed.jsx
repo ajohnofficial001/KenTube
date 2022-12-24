@@ -16,7 +16,7 @@ const SearchFeed = () => {
   return (
     <Box
       p={2}
-      sx={{ overflowY: "auto", height: "90vh", flex: 2, marginTop: "6.5rem" }}
+      sx={{ overflowY: "auto", height: "90vh", flex: 2, marginTop: "4.6rem" }}
     >
       <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
         Search results for:
